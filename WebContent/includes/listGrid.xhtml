@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/layout.xhtml">
+
+
+	
+
+	<ui:define name="conteudo" >
+
+		<p:dataTable emptyMessage="Nenhum registro encontrado"
+			value="#{MBgrid.itens}" var="item" paginator="true" rows="16"
+			style="margin-top:20px">
+
+			<f:facet name="header">Lista de carros no Estacionamento</f:facet>
+			<p:column headerText="Codigo" sortBy="#{item.id}">
+				<h:outputText value="#{item.id}" />
+			</p:column>
+			<p:column headerText="Modelo" sortBy="#{item.modelo}"
+				filterBy="#{item.modelo}">
+				<h:outputText value="#{item.modelo}" />
+			</p:column>
+			<p:column headerText="Marca" sortBy="#{item.marca}"
+				filterBy="#{item.marca}">
+				<h:outputText value="#{item.marca}" />
+			</p:column>
+			<p:column headerText="Cor" sortBy="#{item.cor}"
+				filterBy="#{item.cor}">
+				<h:outputText value="#{item.cor}" />
+			</p:column>
+			<p:column headerText="Placa" sortBy="#{item.placa}"
+				filterBy="#{item.placa}">
+				<h:outputText value="#{item.placa}" />
+			</p:column>
+		</p:dataTable>
+
+
+	</ui:define>
+
+</ui:composition>

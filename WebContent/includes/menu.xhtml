@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<h:form>
+		<p:megaMenu orientation="vertical" style="margin-top:120px" >
+		
+			<p:menuitem value="Home" outcome="/includes/listGrid.xhtml"/>
+		</p:megaMenu>
+
+		<p:megaMenu orientation="vertical" style="margin-top:20px">
+			<p:menuitem value="Entrada" />
+		</p:megaMenu>
+
+		<p:megaMenu orientation="vertical" style="margin-top:20px">
+			<p:menuitem value="Saida" />
+		</p:megaMenu>
+
+		<p:megaMenu orientation="vertical" style="margin-top:20px">
+			<p:submenu label=" Relatorios" icon="pi pi-check">
+			
+					<p:menuitem value="relatorio 1" />
+				
+			</p:submenu>
+
+
+		</p:megaMenu>
+
+		<p:megaMenu orientation="vertical" style="margin-top:20px">
+
+			<p:menuitem value="Configurações" />
+		</p:megaMenu>
+
+		<p:megaMenu orientation="vertical" style="margin-top:20px">
+			<p:menuitem value="Sair" />
+
+		</p:megaMenu>
+	</h:form>
+</ui:composition>
